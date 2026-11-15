@@ -25,7 +25,7 @@ modeli, Viking mozaiği, TES ve THEMIS ürünleri (ASU), OMEGA + CRISM sulu mine
 dayandığı tarama), jeoloji haritası ve yapı katalogları.
 
 Sol menü: beş volkanik alan, Mars, iki mekânı yan yana koyan Karşılaştırma ve Mars'ta W tuşuyla sürülen
-gezici araç simülasyonu (3D Simulation) ile Karapınar ve Divlit analoglarına dayalı üç boyutlu A.R.E.S.
+gezici araç simülasyonu (2D Simulation) ile Karapınar ve Divlit analoglarına dayalı üç boyutlu A.R.E.S.
 rota simülasyonu (3D Simulation).
 Sekiz inceleme başlığı: jeoloji-mineraloji · topoğrafya · sıcaklık-aydınlanma · su-buz-kaynaklar ·
 toz-rüzgâr-erozyon · biyoloji-yaşanabilirlik · mağara-lav tüpü · iniş-hareketlilik-inşaat.
@@ -3949,7 +3949,7 @@ def compare_view(place_a, place_b, mars_region, n, year):
 
 
 # --------------------------------------------------------------------------------------
-# 3D SİMÜLASYON — Mars, Elysium – Cerberus Fossae
+# 2D SİMÜLASYON — Mars, Elysium – Cerberus Fossae
 # --------------------------------------------------------------------------------------
 SIM_REGION = "Elysium – Cerberus Fossae"
 SIM_GEO_TR = {"lAvf": "Geç Amazoniyen volkanik alan birimi", "lAv": "Geç Amazoniyen volkanik birim",
@@ -4369,7 +4369,7 @@ def sim_page():
         sim_analysis()
         return
     set_body("mars")
-    st.title("🎮 3D Simulation — Mars gezici aracı")
+    st.title("🎮 2D Simulation — Mars gezici aracı")
     st.caption("Altlık görüntüler NASA Mars Trek'ten canlı alınır (THEMIS gündüz kızılötesi 100 m, Viking renk 232 m); yükseklik, "
                "eğim ve engebelilik MOLA + HRSC yükseklik modelinden, pürüzlülük MOLA pürüzlülük haritasından gelir.")
     try:
@@ -5237,7 +5237,7 @@ def sim3d_page():
         sim3d_analysis()
         return
     set_body("mars")
-    st.title("🎮 Rota Oluşturma Simülasyonu — A.R.E.S. çift-analog gezici rotası")
+    st.title("🎮 3D Rota Oluşturma Simülasyonu — A.R.E.S. çift-analog gezici rotası")
     st.caption("Mars · Elysium Planitia – Cerberus Fossae (9,64° K, 161,98° D çevresi). Arazi MOLA + HRSC yükseklik modelinden, yüzey dokuları "
                "NASA Mars Trek'ten (THEMIS IR, Viking, USGS SIM 3292) gelir. Yer gerçeği analogları: Karapınar (bilim durakları S1–S3) ve "
                "Divlit / Kula (tekerlek aşınma zonları, lav tüpü üssü B1).")
@@ -5579,10 +5579,10 @@ THEME_TITLES = {
 MARS = "Mars"
 COMPARE = "↔ Karşılaştırma"
 SIMILARITY = "↔ Benzerlik Oranları"
-SIM = "3D Simulation"            # ilk 2D simülasyon: kodda duruyor, menüde gösterilmiyor
-SIM_LABEL = ":red-background[**🎮 3D SIMULATION**]"
-SIM3 = "2D Rota Oluşturma Simülasyonu"   # A.R.E.S. rota simülasyonu (sim3d_page)
-SIM3_LABEL = ":red-background[**🎮 2D ROTA OLUŞTURMA SİMÜLASYONU**]"
+SIM = "2D Simulation"            # ilk 2D simülasyon: kodda duruyor, menüde gösterilmiyor
+SIM_LABEL = ":red-background[**🎮 2D SIMULATION**]"
+SIM3 = "3D Rota Oluşturma Simülasyonu"   # A.R.E.S. rota simülasyonu (sim3d_page)
+SIM3_LABEL = ":red-background[**🎮 3D ROTA OLUŞTURMA SİMÜLASYONU**]"
 GRID_N = 450                     # ızgara çözünürlüğü (uzun kenar, piksel) — sabit
 MEKE = "Meke Gölü ve Karapınar – Konya"
 KULA = "Kula Volkanik Jeoparkı – Manisa"
